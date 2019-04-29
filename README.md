@@ -6,9 +6,9 @@ OfferNoProblem
 ## android
 
 ### 资料
-[链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密码:7z4x](android入门资料)
+android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密码:7z4x](android入门资料)
 ## java
-[链接:https://pan.baidu.com/s/1ip4VEdbCDp0FV3G0Cr5CYw  密码:msx5](java四大名著)
+java四大名著 [链接:https://pan.baidu.com/s/1ip4VEdbCDp0FV3G0Cr5CYw  密码:msx5](java四大名著)
 
 
 ## 网络

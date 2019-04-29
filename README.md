@@ -2,7 +2,7 @@ OfferNoProblem
 ==============
 ## 仓库介绍
 
-  这个仓库会分模块更新android面试相关的所有技术知识，欢迎纠正与更新。
+  这个仓库会分模块更新android面试相关的技术知识，欢迎纠正与更新。
 ## android
 1.Binder介绍
 分为Client和Server两个进程，发消息的作为client接受的作为server，使用时Server需要在ServiceManeger中注册
@@ -15,9 +15,10 @@ OfferNoProblem
 
 
 ### 资料
-[链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密码:7z4x](android入门资料)
+android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密码:7z4x](android入门资料)
 ## java
-[链接:https://pan.baidu.com/s/1ip4VEdbCDp0FV3G0Cr5CYw  密码:msx5](java四大名著)
+### 资料
+java四大名著 [链接:https://pan.baidu.com/s/1ip4VEdbCDp0FV3G0Cr5CYw  密码:msx5](java四大名著)
 
 
 ## 网络

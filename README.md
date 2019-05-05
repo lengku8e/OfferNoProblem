@@ -17,7 +17,7 @@ OfferNoProblem
 
 3.叙述app启动流程
 
-[https://www.jianshu.com/p/602aec6f1209](https://www.jianshu.com/p/602aec6f1209)
+[从源码分析app启动过程](https://www.jianshu.com/p/602aec6f1209)
 
  
 

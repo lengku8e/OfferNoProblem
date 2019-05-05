@@ -12,6 +12,11 @@ OfferNoProblem
 。首先，B需要在ServiceManager中注册，然后，A通过SM获取到一个代理Proxy，该Proxy包含同名b()方法，A可以直接调用Proxy的b()方法，
 最后，SM会调用B的b()方法并把结果返回给A。
 
+3.叙述app启动流程
+
+[https://www.jianshu.com/p/602aec6f1209]()
+
+ 
 
 
 ### 资料

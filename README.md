@@ -26,7 +26,7 @@ OfferNoProblem
 构造函数不同，DexClassLoader的 optimizedDirectory 字段非空，而PathClassLoader为空。其中 optimizedDirectory 是用来缓存需要加载的dex文件，所以DexClassLoader可以加载外部的dex文件，
 PathClassLoader只能加载已经安装的apk的dex
 
-![2af8b1074f0b01626166408cda382955.png](evernotecid://5D52BB85-014F-402C-8DD8-F5E6F9F48FFD/appyinxiangcom/19409488/ENResource/p119)
+!(https://github.com/lengku8e/OfferNoProblem/blob/master/app/src/main/res/mipmap-xhdpi/classLoader.png?raw=true)
 
 
 

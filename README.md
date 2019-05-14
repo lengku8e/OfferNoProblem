@@ -118,11 +118,13 @@ android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密
 
 4.父类的静态方法能否被子类重写，为什么？
 不能。子类继承父类后，用相同的静态方法和非静态方法，这时非静态方法覆盖父类中的方法（即方法重写），父类的该静态方法被隐藏（如果对象是父类则调用该隐藏的方法），另外子类可继承父类的静态与非静态方法，至于方法重载我觉得它其中一要素就是在同一类中，不能说父类中的什么方法与子类里的什么方法是方法重载的体现
+
 5.举1-2个排序算法，并使用java代码实现（美团）
 
 [排序算法](http://blog.csdn.net/qy1387/article/details/7752973)
 
 6.列举java的集合的继承关系
+
 ![574d38f29ffdfc81de9463c96decba71.png](evernotecid://5D52BB85-014F-402C-8DD8-F5E6F9F48FFD/appyinxiangcom/19409488/ENResource/p135)
 
 7.java虚拟机的特性
@@ -144,6 +146,7 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 进程和线程的主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。如果有兴趣深入的话，我建议你们看看《现代操作系统》或者《操作系统的设计与实现》。对就个问题说得比较清楚。
 
 10.Java中==和equals的区别，equals和hashCode的区别
+
 [state模式](http://blog.csdn.net/tiantiandjava/article/details/46988461)
 
 11.常见的排序算法时间复杂度（小米）
@@ -155,6 +158,7 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 从上图中可以看出，HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。
 13.java state模式
+
 [state模式](http://www.jdon.com/designpatterns/designpattern_State.htm)
 
 14.java中int char long各占多少字节数
@@ -237,17 +241,22 @@ wait() 和 notify() 方法的上述特性决定了它们经常和synchronized �
 
 
 20.容器类之间的区别
+
 [容器类之间的区别](http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html)
 
-[容器类之间的区别](http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html http://alexyyek.github.io/2015/04/06/Collection/http://tianmaying.com/tutorial/java_collection)
+[容器类之间的区别]
+(http://www.cnblogs.com/yuanermen/archive/2009/08/05/1539917.html http://alexyyek.github.io/2015/04/06/Collection/http://tianmaying.com/tutorial/java_collection)
 
 21.java 内部类
+
 [java 内部类](http://www.cnblogs.com/chenssy/p/3388487.html)
+
 22.Java中hashmap和hashtable的区别
 
 [hashmap和hashtable的区别](http://www.233.com/ncre2/JAVA/jichu/20100717/084230917.html)
 
 23.ArrayMap VS HashMap
+
 [hashmap和hashtable的区别](http://lvable.com/?p=217)
 
 

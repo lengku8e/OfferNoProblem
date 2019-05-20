@@ -121,10 +121,14 @@ android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密
 
 5.举1-2个排序算法，并使用java代码实现（美团）
 
+
 [排序算法](http://blog.csdn.net/qy1387/article/details/7752973)
 
+
 6.列举java的集合的继承关系
+
  ![](https://github.com/lengku8e/OfferNoProblem/blob/master/app/src/main/res/mipmap-xhdpi/collection.png)
+ 
 
 7.java虚拟机的特性
 

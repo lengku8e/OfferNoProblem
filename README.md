@@ -124,8 +124,7 @@ android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密
 [排序算法](http://blog.csdn.net/qy1387/article/details/7752973)
 
 6.列举java的集合的继承关系
-
-![574d38f29ffdfc81de9463c96decba71.png](evernotecid://5D52BB85-014F-402C-8DD8-F5E6F9F48FFD/appyinxiangcom/19409488/ENResource/p135)
+ ![](https://github.com/lengku8e/OfferNoProblem/blob/master/app/src/main/res/mipmap-xhdpi/collection.png)
 
 7.java虚拟机的特性
 
@@ -153,8 +152,9 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 11.常见的排序算法时间复杂度（小米）
 
-    ![8b940c40bb29c986a6e6158d6b293d83.png](evernotecid://5D52BB85-014F-402C-8DD8-F5E6F9F48FFD/appyinxiangcom/19409488/ENResource/p133)
-    
+ ![](https://github.com/lengku8e/OfferNoProblem/blob/master/app/src/main/res/mipmap-xhdpi/time.png)
+
+   
 12.HashMap的实现原理（美团）
 *   HashMap概述：    HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。
 *   HashMap的数据结构： 在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。

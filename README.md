@@ -40,8 +40,7 @@ PathClassLoader只能加载已经安装的apk的dex
 
 6.Service启动流程（区分同进程或非同进程）
 
-非进程：要启动的服务在不同进程中，主要分为五个阶段 1.App向AMS抛出启动Service的消息2.AMS检查启动Service的进程是否存在，如果不存在就先保存Service信息，保存在ServiceRecord对象中，并创建一个新进程
-3.新进程启动后，创建ActivityThread对象，并通过AIDL通知AMS，进程启动成功 4.AMS把保存的Service信息发给新进程5.AMS抛出启动服务消息，新进程的ActivityThread接受到消息后调用handleCreateService方法，获取LoadedApk对象(包含了packgeInfo的包信息),然后获取其classLoader反射出service，并调用服务onCreate方法启动服务。
+非进程：要启动的服务在不同进程中，主要分为五个阶段 1.App向AMS抛出启动Service的消息2.AMS检查启动Service的进程是否存在，如果不存在就先保存Service信息，保存在ServiceRecord对象中，并创建一个新进程3.新进程启动后，创建ActivityThread对象，并通过AIDL通知AMS，进程启动成功 4.AMS把保存的Service信息发给新进程5.AMS抛出启动服务消息，新进程的ActivityThread接受到消息后调用handleCreateService方法，获取LoadedApk对象(包含了packgeInfo的包信息),然后获取其classLoader反射出service，并调用服务onCreate方法启动服务。
 
 ```
  private void handleCreateService(CreateServiceData data) {
@@ -94,6 +93,10 @@ PathClassLoader只能加载已经安装的apk的dex
 
 同进程：1.APP向AMS发送启动Service消息2.服务在AMS中保存3.AMS判断是在同进程启动后直接启动Service。
 
+7.inflate方法参数意义
+
+最多三个参数layoutId, rootViewGroup, attachToRoot，重点区别在于rootViewGroup是否传空或attachToRoot真假与否，当rootViewGroup传空时，无论attachToRoot传真或假，都会直接返回要加载的layoutId对应的view，返回的view没有父布局且没有LayoutParams；当rootViewGroup不空时，attachToRoot传真，或不传效果一样，会为layoutId对应的view直接设置LayoutParams并添加到rootViewGroup中，然后再将rootViewGroup返回；当attachToRoot传假时，会为传入的layoutId对应的view设置LayoutParams参数（）,但不会添加到rootViewGroup，返回layoutId对应的view，
+
 
 
  
@@ -109,8 +112,22 @@ android入门资料 [链接:https://pan.baidu.com/s/1X5nY9EmS5LnQLuH4EXrqBA  密
 2.抽象类的意义
 为其子类提供一个公共的类型 封装子类中得重复内容 定义抽象方法，子类虽然有不同的实现 但是定义是一致的
 
+* 抽象类和接口的区别
+
+抽象类不能被实例化，可以有构造方法,可以包含静态方法，可以不包含抽象方法，但一旦包含抽象方法其子类必须实现，包含抽象方法的类一定是抽象类，抽象类的抽象派生类可以不实现基类抽象方法。接口同样不能被实例化，不能有构造函数，不能包含静态方法，只能包含方法的声明。这里需要注意匿名内部类并不是实例化了接口或抽象类。 a是抽象类的子类（实现类）的一个实例。只不过定义该子类的同时直接实例化了一个该子类的对象,并且指向了父类类型的引用。
+
+```
+ AbstractA a = new AbstractA() {
+            @Override
+            void abstractMethod() {
+                doSomething();
+            }
+        }
+```
+
+
 3.内部类的作用
-* 内部类可以用多个实例，每个实例都有自己的状态信息，并且与其他外围对象的信息相互独立。
+*  内部类可以用多个实例，每个实例都有自己的状态信息，并且与其他外围对象的信息相互独立。
 *   在单个外围类中，可以让多个内部类以不同的方式实现同一个接口，或者继承同一个类。
 *   创建内部类对象的时刻并不依赖于外围类对象的创建。
 *   内部类并没有令人迷惑的“is-a”关系，他就是一个独立的实体。
@@ -154,12 +171,12 @@ Java 垃圾回收机制最基本的做法是分代回收。内存中的区域被
 
 [Java中==和equals的区别，equals和hashCode的区别](http://blog.csdn.net/tiantiandjava/article/details/46988461)
 
-11.常见的排序算法时间复杂度（小米）
+11.常见的排序算法时间复杂度
 
  ![](https://github.com/lengku8e/OfferNoProblem/blob/master/app/src/main/res/mipmap-xhdpi/time.png)
 
    
-12.HashMap的实现原理（美团）
+12.HashMap的实现原理
 *   HashMap概述：    HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。
 *   HashMap的数据结构： 在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即数组和链表的结合体。HashMap底层就是一个数组结构，数组中的每一项又是一个链表。当新建一个HashMap的时候，就会初始化一个数组。
 
@@ -278,9 +295,14 @@ wait() 和 notify() 方法的上述特性决定了它们经常和synchronized �
 
 23.ArrayMap VS HashMap
 
-[hashmap和hashtable的区别](http://lvable.com/?p=217)
+[ArrayMap VS HashMap](http://lvable.com/?p=217)
 
+24.ArrayList介绍
+基于数组实现，可动态扩展容量，线程不安全，实现了RandomAccess,Cloneable,Serializable接口。
 
+25.HashMap源码解析
+
+[面试必问的HashMap，你真的了解吗](https://mp.weixin.qq.com/s/SHJzWpZ0MscuJhPLRwWQxg)
 
 
 

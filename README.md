@@ -312,6 +312,84 @@ java四大名著 [链接:https://pan.baidu.com/s/1ip4VEdbCDp0FV3G0Cr5CYw  密码
 
 ## 网络
 
+1.http协议介绍
+默认80端口，是在输入网站的时候浏览器（非IE）默认输入协议，当输入http://www.baidu.com，其实是访问http://www.baidu.com:80.
+
+2.http协议特点
+
+*  支持客户／服务器模式
+*  简单快速：客户向服务端请求服务时，只需传送请求方式和路径。
+*  灵活：允许传输任意类型的数据对象。由Content-Type加以标记。
+*  无连接：每次响应一个请求，响应完成以后就断开连接。
+*  无状态：服务器不保存浏览器的任何信息。每次提交的请求之间没有关联。
+
+3.持续性和非持续性
+
+*  HTTP1.0默认非持续性；HTTP1.1默认持续性    
+*  持续性，浏览器和服务器建立TCP连接后，可以请求多个对象；非持续性，浏览器和服务器建立TCP连接后，只能请求一个对象。
+
+4.POST和GET的区别   
+
+* Post一般用于更新或者添加资源信息
+* Get一般用于查询操作，而且应该是安全和幂等的
+* Post更加安全
+* Get会把请求的信息放到URL的后面
+* Post传输量一般无大小限制
+* Get不能大于2KB
+* Post执行效率低
+* Get执行效率略高
+
+5.为什么POST效率低，Get效率高
+ Get将参数拼成URL,放到header消息头里传递，Post直接以键值对的形式放到消息体中传递。但两者的效率差距很小很小。
+
+6.Https介绍
+
+* 端口号是443
+* 是由SSL+Http协议构建的可进行加密传输、身份认证的网络协议。
+
+7.Socket使用TCP/UDP
+TCP客户端
+```
+
+Socket socket = new Socket("ip", 端口);
+// 创建Socket对象，指明需要连接的服务器的地址和端口号
+        is = socket.getInputStream();
+        os = socket.getOutputStream();
+        DataInputStream dis = new DataInputStream(is);
+        DataOutputStream dos = new DataOutputStream(os);
+
+        dos.writeUTF("hello");//连接建立后，通过输出流向服务器端发送请求信息
+        String s = null;
+        if((s = dis.readUTF()) != null){
+            System.out.println(s); // 通过输入流获取服务器响应的信息
+        }
+        dos.close();
+        dis.close();
+        socket.close();
+```
+TCP服务器端
+```
+服务器端
+ServerSocket serverSocket = new ServerSocket(端口); //创建ServerSocket对象，绑定监听端口
+        in = socket.getInputStream();// 得到来自客户端写入的数据
+        out = socket.getOutputStream();// 服务器端输出流对象
+
+        DataOutputStream dos = new DataOutputStream(out);
+        DataInputStream dis = new DataInputStream(in);
+
+        String s =null;//定义从客户端读出的字符串
+        //如果读出的不为空的话。向客户端发出本机的ip地址和连接的端口号
+        if((s = dis.readUTF()) != null){
+            System.out.println(s); // 通过输入流获取客户端写入的信息
+        }
+        dos.writeUTF("hello success");// 向客户端发送信息
+        dis.close();// 关闭流对象
+        dos.close();
+        socket.close();
+```
+
+
+
 
 ## 数据结构
 

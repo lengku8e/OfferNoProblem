@@ -409,4 +409,10 @@ ServerSocket serverSocket = new ServerSocket(端口); //创建ServerSocket对象
 ## 三方开源库原理及使用
 
 
+## 其他搜集的资料
+
+[ Android & Java面试详细个人总结](https://mp.weixin.qq.com/s/izdIkiU5YcR-rIOw0ehU4g)
+
+
+
 

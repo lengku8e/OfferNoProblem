@@ -413,6 +413,13 @@ ServerSocket serverSocket = new ServerSocket(端口); //创建ServerSocket对象
 
 [ Android & Java面试详细个人总结](https://mp.weixin.qq.com/s/izdIkiU5YcR-rIOw0ehU4g)
 
+[【面试】通往大神之路，百度Java面试题前200页](https://mp.weixin.qq.com/s/t2xYKjrobGfvaABj8x9fFg)
 
+[Android中高级面试题准备整理分享（含答案）](https://mp.weixin.qq.com/s/kwZDJpRQ71zAhMW9EjjSkg)
 
+[金三银四，来一波Android面试(附答案)](https://mp.weixin.qq.com/s/3DJOu7V-7LOEevFg_pXHWw)
+
+[2018 年 8 月面试路：6 天 21 家公司](https://mp.weixin.qq.com/s/r0vVUxRwKXu3LtFYMfdgsw)
+
+[2018年Android中高级面试题含答案](https://mp.weixin.qq.com/s/t4LEB0c2YGJOJmLpa0cHFg)
 
